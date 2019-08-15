@@ -1,5 +1,1 @@
-numpy
-pandas
-sklearn
-nltk
-yellowbrick
+python-3.7.3
