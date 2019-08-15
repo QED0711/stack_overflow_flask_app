@@ -3,3 +3,4 @@ flask_cors
 sklearn
 nltk
 yellowbrick
+pandas
