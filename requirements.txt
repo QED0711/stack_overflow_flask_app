@@ -1,6 +1,4 @@
 flask
-numpy
-pandas
 sklearn
 nltk
 yellowbrick
