@@ -13,7 +13,7 @@ const UserForm = ({ setPrediction }) => {
 
     return (
         <form id="user-form" onSubmit={handleSubmit}>
-            <textarea id="user-form-text"></textarea>
+            <textarea id="user-form-text" placeholder="paste or write your text here..."></textarea>
             <br/>
             <input type="submit" value="Predict Tag"/>
         </form>
