@@ -13,6 +13,8 @@ app = Flask(__name__)
 
 CORS(app)
 
+print(lr_model)
+
 @app.route('/', methods=['POST'])
 def predict():
     print(request)
