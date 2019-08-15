@@ -3,6 +3,3 @@ flask_cors
 sklearn
 nltk
 yellowbrick
-warnings
-pickle
-re
