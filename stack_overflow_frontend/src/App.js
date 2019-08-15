@@ -4,14 +4,17 @@ import './App.css';
 
 
 import UserForm from './components/UserForm';
+import Header from './components/Header';
+import Predictions from './components/Predictions';
 
 const App = () => {
   const [prediction, setPrediction] = useState("")
   
   return (
     <div className="App">
+      <Header />
       <UserForm setPrediction={setPrediction} />
-      <h1>{prediction}</h1>
+      <Predictions prediction={prediction}/>
     </div>
   );
 }
