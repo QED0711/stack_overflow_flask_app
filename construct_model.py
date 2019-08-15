@@ -1,9 +1,6 @@
 from sklearn.pipeline import Pipeline 
 from sklearn.model_selection import train_test_split
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-
 from yellowbrick.classifier import ConfusionMatrix
 from yellowbrick.classifier import ROCAUC
 
