@@ -9,13 +9,13 @@ from text_pre_processor import *
 with open('./lg_model.pkl', 'rb') as f:
     lr_model = pickle.load(f)
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-CORS(app)
+CORS(application)
 
 print(lr_model)
 
-@app.route('/', methods=['POST'])
+@application.route('/', methods=['POST'])
 def predict():
     print(request)
 
@@ -27,3 +27,5 @@ def predict():
     return flask.jsonify({"prediction": prediction})
 
 
+if __name__ == "__main__":
+    application.run(host='0.0.0.0')
