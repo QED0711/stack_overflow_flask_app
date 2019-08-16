@@ -17,14 +17,16 @@ print(lr_model)
 
 @application.route('/', methods=['POST'])
 def predict():
-    print(request)
+    print(request.json)
 
     user_input = request.json["user_input"]
     prediction = lr_model.get_prediction(user_input)[0]
     
-    print(prediction)
+    proba = lr_model.get_prediction(user_input, "proba")
+
+    print(prediction, proba)
     
-    return flask.jsonify({"prediction": prediction})
+    return flask.jsonify({"prediction": prediction, "proba": proba})
 
 
 if __name__ == "__main__":

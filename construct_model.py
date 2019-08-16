@@ -64,7 +64,7 @@ class ConstructModel:
             return self.pipe.predict([processed_text])
         elif format == "proba":
             classes = self.pipe.classes_
-            return list(zip(classes, list(self.pipe.predict_proba([processed_text])[0])))
+            return list(list(x) for x in zip(classes, list(self.pipe.predict_proba([processed_text])[0])))
     
     
 if __name__ == "__main__":
